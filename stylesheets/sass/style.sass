@@ -11,16 +11,23 @@ $bg-color: #fff
   display: block
   content: ''
   clear: both
-body 
+*
+  box-sizing: border-box
+html, body
+  height: 100%
+body
+  min-height: 100%
   font-family: $font-stack
   color: $primary-color
   background-color: $bg-color
   min-width: 320px
   margin: 0 auto
 .wrap
-  @extend body
+  min-width: 320px
   width: 100%
   max-width: 1140px
+  padding: 8px
+  margin: 0 auto
 a
   color: $primary-color
   text-decoration: none
@@ -47,15 +54,45 @@ a
 #price, #lang
   float: right
   margin: 4px
-.header_menu a:hover
-  color: $hover-color
+
+.search_label
+  background-image: url(../../images/loop.png)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: 100%
+  width: 16px
+  height: 16px
+input[type="search"]
+  display: none
+  float: left
+  margin-left: 24px
+input[type="checkbox"]
+  display: none
+#checkbox:checked~#search
+  display: block
 .header_main
+  @extend .header_top
   display: flex
-  justify-content: space-between
   align-items: center
+  position: relative
+  justify-content: center
+  flex: 3
+.logo
+  display: flex
+  flex: 1
 .header_menu 
   @extend .header_top_menu
+  position: absolute
+  left: 0
+  right: 0
+  top: 4px
+  margin: auto
   width: 320px
+.header_menu li>a:hover
+  color: $hover-color
+.header_main::after
+  @extend .clear
 .header_menu::after
   @extend .clear
-
+footer
+  height: 50px
