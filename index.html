@@ -3,49 +3,53 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<title>ELiken</title>
-		<link rel="stylesheet" href="style.css">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<title>Eleken</title>
+		<link rel="stylesheet" href="stylesheets/css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 		<link rel="shortcut icon" href="images/favico.ico">
 		</head>
 	<body>
 	<header>
 		<div class="header_top">
-			<ul class="header_top_menu">
-				<li><a href="#">Delivery</a></li>
-				<li><a href="#">Faq</a></li>
-				<li><a href="#">Help</a></li>
-			</ul>
-			<select name="price" id="price">
-				<option value="Dollars">Dollars</option>
-			</select>
-			<select name="lang" id="lang">
-				<option value="EN">EN</option>
-				<option value="UA">UA</option>
-			</select>
+			<div class="wrap">
+				<ul class="header_top_menu">
+					<li><a href="#">Delivery</a></li>
+					<li><a href="#">Faq</a></li>
+					<li><a href="#">Help</a></li>
+				</ul>
+				<select name="price" id="price">
+					<option value="Dollars">Dollars</option>
+				</select>
+				<select name="lang" id="lang">
+					<option value="EN">EN</option>
+					<option value="UA">UA</option>
+				</select>
+			</div>
 		</div>
 		<div class="header_main">
-			<span class="logo">
-				C&amp;b
-			</span>
-			<nav>
-				<ul class="header_menu">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Catalog</a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#">Sale</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
+			<div class="wrap">
+				<span class="logo">
+					C&amp;b
+				</span>
+				<nav>
+					<ul class="header_menu">
+						<li><a href="#">Home</a></li>
+						<li><a href="#" class="active">Catalog</a></li>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Sale</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
 				<span class="bag"></span>
 				<input type="search" id="search">
-			</nav>
+			</div>
 		</div>
 	</header>
 	<div class="wrap">
 		<h1>Catalog</h1>
 		<ul class="content_menu">
-			<li><a href="#">All</a></li>
+			<li><a href="#" class="active">All</a></li>
 			<li><a href="#">T-shirts</a></li>
 			<li><a href="#">Sweaters</a></li>
 			<li><a href="#">Shorts</a></li>

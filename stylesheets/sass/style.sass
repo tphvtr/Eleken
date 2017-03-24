@@ -1,0 +1,61 @@
+
+
+/*# sourceMappingURL=style.sass.map */
+$font-stack: 'Lato', sans-serif
+$primary-color: #999
+$active-color: #000
+$active-border-color: #1274d3
+$hover-color: #fc411d
+$bg-color: #fff
+.clear::after
+  display: block
+  content: ''
+  clear: both
+body 
+  font-family: $font-stack
+  color: $primary-color
+  background-color: $bg-color
+  min-width: 320px
+  margin: 0 auto
+.wrap
+  @extend body
+  width: 100%
+  max-width: 1140px
+a
+  color: $primary-color
+  text-decoration: none
+.active
+  color: $active-color
+  border-bottom: 2px solid $active-border-color
+.header_top
+  padding: 8px
+  border-bottom: 1px solid #ccc
+.header_top::after
+  @extend .clear
+.header_top_menu
+  float: left
+  list-style-type: none
+  text-decoration: none
+  width: 150px
+  margin: 0 4px
+  padding: 0
+.header_top_menu li>a
+  float: left
+  margin: 4px
+.header_top_menu li>a:hover
+  color: #000
+#price, #lang
+  float: right
+  margin: 4px
+.header_menu a:hover
+  color: $hover-color
+.header_main
+  display: flex
+  justify-content: space-between
+  align-items: center
+.header_menu 
+  @extend .header_top_menu
+  width: 320px
+.header_menu::after
+  @extend .clear
+
