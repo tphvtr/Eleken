@@ -29,6 +29,7 @@ header {
   margin: 0 auto; }
 
 .img_wrap {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -71,7 +72,20 @@ nav {
 
 #price, #lang {
   float: right;
-  margin: 4px; }
+  margin: 4px;
+  border: 0;
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 0 12px;
+  color: #999;
+  background-color: transparent;
+  border-left: 1px #ccc solid;
+  background-image: url("../../images/arrow_bottom.png");
+  background-position: right;
+  background-repeat: no-repeat; }
+
+#lang {
+  border: 0; }
 
 #search {
   text-indent: 2px;
@@ -160,7 +174,7 @@ input[type="checkbox"] {
   text-align: center; }
 
 .wrap_bag_loop {
-  width: 100%;
+  width: 170px;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -190,7 +204,26 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 16px 0; }
+  margin: 16px 30px;
+  height: 428px; }
+  .product h2 {
+    height: 58px;
+    text-align: center; }
+
+.new_product {
+  position: absolute;
+  color: #fff;
+  font-size: 11px;
+  background-color: #1d83d9;
+  border-radius: 50px;
+  text-align: center;
+  padding: 8px 10px;
+  top: 26px;
+  left: 26px;
+  text-transform: uppercase; }
+
+.price {
+  display: flex; }
 
 .old_price_Bermuda, .old_price_T-shirt, .old_price_T-shirt::before {
   color: #fc411d; }
@@ -212,6 +245,9 @@ button[type="submit"] {
   color: #999;
   text-transform: uppercase;
   font-size: 12px; }
+
+button[type="submit"]:hover {
+  cursor: pointer; }
 
 .wrap_form {
   background-image: url("../../images/bg_footer.png");
@@ -249,22 +285,41 @@ input[type="email"] {
   input[type="email"]::-webkit-input-placeholder {
     color: #fff;
     font-size: 12px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: left;
+    text-indent: 16px; }
   input[type="email"]:-moz-input {
     color: #fff;
     font-size: 12px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: left;
+    text-indent: 16px; }
   input[type="email"]::-moz-placeholder {
     color: #fff;
     font-size: 12px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: left;
+    text-indent: 16px; }
   input[type="email"]:-ms-input-placeholder {
     color: #fff;
     font-size: 12px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: left;
+    text-indent: 16px; }
 
 input[type="email"]:focus {
   outline: none; }
+
+input[type="submit"] {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 12px;
+  position: relative;
+  right: 40px; }
+
+input[type="submit"]:hover {
+  cursor: pointer; }
 
 footer {
   display: flex;
@@ -278,6 +333,31 @@ footer {
 .copyright {
   font-size: 12px;
   display: block;
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  align-items: center; }
+
+@media (min-width: 800px) {
+  .header_main {
+    flex-direction: row; }
+
+  .header_menu, .header_menu_footer {
+    flex-direction: row; }
+
+  .wrap_footer {
+    width: 100%;
+    max-width: 1140px;
+    display: flex; }
+
+  .content_menu {
+    flex-direction: row; }
+
+  .wrap_product {
+    display: block;
+    padding: 0; }
+
+  .product {
+    width: calc(25% - 60px);
+    float: left; } }
 
 /*# sourceMappingURL=style.css.map */
