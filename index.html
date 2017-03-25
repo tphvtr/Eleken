@@ -26,28 +26,32 @@
 				</select>
 			</div>
 		</div>
-		<div class="header_main">
-			<span class="logo">
-				C&amp;b
-			</span>
-			<nav>
-				<ul class="header_menu">
-					<li><a href="#">Home</a></li>
-					<li><a href="#" class="active">Catalog</a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#">Sale</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</nav>
-			<span class="bag"></span>
-			<label for="checkbox" class="search_label">
-				<input type="checkbox" id="checkbox">
-				<input type="search" id="search">
-			</label>
+		<div class="wrap">
+			<div class="header_main">
+				<span class="logo">
+					&amp;
+				</span>
+				<nav>
+					<ul class="header_menu">
+						<li><a href="#">Home</a></li>
+						<li><a href="#" class="active">Catalog</a></li>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Sale</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="wrap_bag_loop">
+					<span class="bag">Your bag</span>
+					<label for="checkbox" class="search_label">
+					</label>
+					<input type="checkbox" id="checkbox">
+					<input id="search" placeholder="Search here...">
+				</div>
+			</div>
 		</div>
 	</header>
-	<div class="wrap">
+	<div class="wrap_menu">
 		<h1>Catalog</h1>
 		<ul class="content_menu">
 			<li><a href="#" class="active">All</a></li>
@@ -58,28 +62,79 @@
 			<li><a href="#">Accessoires</a></li>
 		</ul>
 	</div>
-	<div class="wrap">
+	<div class="wrap_product">
 		<div class="product">
 			<div class="img_wrap">
-				<img src="#" alt="printed swimsuit">
+				<img src="images/printed_swimsuit.png" alt="Printed swimsuit">
 			</div>
-			<h2>Lorem ipsum.</h2>
+			<h2>Printed swimsuit</h2>
+			<span class="price">$23</span>
+		</div>
+		<div class="product">
+			<div class="img_wrap">
+				<img src="images/bermuda_shorts.png" alt="Jogging bermuda shorts">
+			</div>
+			<h2>Jogging bermuda shorts</h2>
+			<p class="price old_price_Bermuda">$12</p>
+		</div>
+		<div class="product">
+			<div class="img_wrap">
+				<img src="images/flip_flops.png" alt="Basic beach flip flops">
+			</div>
+			<h2>Basic beach flip flops</h2>
+			<span class="price">$9</span>
+		</div>
+		<div class="product">
+			<div class="img_wrap">
+				<img src="images/sunglasses.png" alt="Black sunglasses">
+			</div>
+			<h2>Black sunglasses</h2>
+			<span class="price">$29</span>
+		</div>
+		<div class="product">
+			<div class="img_wrap">
+				<img src="images/twill short.png" alt="Long sleeved twill">
+			</div>
+			<h2>Long sleeved twill</h2>
+			<span class="price">$20</span>
+		</div>
+		<div class="product">
+			<div class="img_wrap">
+				<img src="images/basic swimsuit.png" alt="Basic swimsuit">
+			</div>
+			<h2>Basic swimsuit</h2>
 			<span class="price">$36</span>
 		</div>
+		<div class="product">
+			<div class="img_wrap">
+				<img src="images/bleached_shorts.png" alt="Bleached shorts">
+			</div>
+			<h2>Bleached shorts</h2>
+			<span class="price">$12</span>
+		</div>
+		<div class="product">
+			<div class="img_wrap">
+				<img src="images/t-shirt.png" alt="T-shirt with lower panel">
+			</div>
+			<h2>T-shirt with lower panel</h2>
+			<span class="price old_price_T-shirt">$12</span>
+		</div>
 	</div>
-	<button type="submit">Load more</button>
-	<footer class="footer">
-		<form id="subscribe_form">
-			<h5>Subscribe</h5>
-			<h2>Stay updated on news</h2>
-			<input type="mail" placeholder="your email adress">
-		</form>
-		<div class="header_main">
+	<button type="submit">Load more...</button>
+	<footer>
+		<div class="wrap_form">
+			<form id="subscribe_form">
+				<h5>Subscribe</h5>
+				<h2>Stay updated on news</h2>
+				<input type="email" class="email" placeholder="your email adress">
+			</form>
+		</div>
+		<div class="wrap_footer">
 			<span class="logo">
-				C&amp;b
+				&amp;
 			</span>
 			<nav>
-				<ul class="header_menu">
+				<ul class="header_menu_footer">
 					<li><a href="#">Home</a></li>
 					<li><a href="#">Catalog</a></li>
 					<li><a href="#">News</a></li>
@@ -87,8 +142,8 @@
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
-				<span class="copyright">&copy;2010 - 2016 All rights reserved</span>
 			</nav>
+			<span class="copyright">&copy;2010 - 2016 All rights reserved</span>
 		</div>
 	</footer>
 	</body>

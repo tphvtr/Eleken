@@ -6,7 +6,10 @@ $primary-color: #999
 $active-color: #000
 $active-border-color: #1274d3
 $hover-color: #fc411d
+$new_price_color: #fc411d
 $bg-color: #fff
+$placeholder: #fff
+$logo_color: #000
 .clear::after
   display: block
   content: ''
@@ -22,15 +25,28 @@ body
   background-color: $bg-color
   min-width: 320px
   margin: 0 auto
+header
+  border-bottom: 1px solid #ccc
 .wrap
-  min-width: 320px
+  min-width: 304px
   width: 100%
   max-width: 1140px
   padding: 8px
   margin: 0 auto
+.img_wrap
+  display: flex
+  justify-content: center
+  align-items: center
+img
+  width: 100%
+.wrap::after
+  @extend .clear
 a
   color: $primary-color
   text-decoration: none
+nav
+  display: flex
+  flex: 4
 .active
   color: $active-color
   border-bottom: 2px solid $active-border-color
@@ -40,59 +56,209 @@ a
 .header_top::after
   @extend .clear
 .header_top_menu
-  float: left
+  display: block
+  justify-content: center
+  align-items: center
   list-style-type: none
   text-decoration: none
-  width: 150px
+  width: 240px
   margin: 0 4px
   padding: 0
 .header_top_menu li>a
   float: left
-  margin: 4px
+  margin: 4px 16px
 .header_top_menu li>a:hover
   color: #000
 #price, #lang
   float: right
   margin: 4px
-
-.search_label
-  background-image: url(../../images/loop.png)
+#search
+  text-indent: 2px
+  text-align: right
+  border: 0
+  position: absolute
+  margin-right: 16px
+  right: 0
+  bottom: -6px
+  display: none
+  float: left
+  margin-left: 24px
+.search_label::after
+  content: ''
+  background-image: url('../../images/loop.png')
   background-position: center
   background-repeat: no-repeat
   background-size: 100%
   width: 16px
   height: 16px
-input[type="search"]
-  display: none
+  display: block
   float: left
-  margin-left: 24px
+.search_label:hover
+  cursor: pointer
+  margin-top: -2px
+  transition: all .3s linear
 input[type="checkbox"]
   display: none
 #checkbox:checked~#search
   display: block
 .header_main
   @extend .header_top
+  border: 0
+  padding: 16px
+  margin: 0 auto
   display: flex
   align-items: center
+  flex-direction: column
   position: relative
   justify-content: center
-  flex: 3
 .logo
   display: flex
-  flex: 1
+  justify-content: center
+  align-items: flex-end
+  color: $logo_color
+  font-size: 32px
+.logo::before
+  content: 'c'
+  text-transform: uppercase
+  font-size: 58px
+  color: $logo_color
+.logo::after
+  @extend .logo::before
+  content: 'b'
 .header_menu 
   @extend .header_top_menu
-  position: absolute
-  left: 0
-  right: 0
-  top: 4px
+  display: flex
+  flex-direction: column
   margin: auto
-  width: 320px
 .header_menu li>a:hover
   color: $hover-color
 .header_main::after
   @extend .clear
 .header_menu::after
   @extend .clear
+.bag
+  display: flex
+  align-items: center
+  float: left
+.bag::after
+  content: '2'
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 50%
+  border: 2px $active-border-color solid
+  float: right
+  height: 48px
+  width: 48px
+  margin: 0 16px
+  text-align: center
+.wrap_bag_loop
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+.content_menu
+  @extend .header_top_menu
+  display: flex
+  flex-direction: column
+  width: 50%
+  margin: 0 auto
+.wrap_menu
+  display: flex
+  flex-direction: column
+  justify-content: center
+  h1
+    color: #000
+    margin: 8px
+    text-align: center
+.wrap_product
+  @extend .wrap
+  margin: 16px auto
+  display: flex
+  flex-direction: column
+  align-items: center
+.product
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin: 16px 0
+.old_price_Bermuda
+  color: $new_price_color 
+.old_price_T-shirt
+  @extend .old_price_Bermuda
+.old_price_Bermuda::before
+  display: block
+  content: '$36'
+  text-decoration: line-through
+  color: $primary-color 
+.old_price_T-shirt::before
+  @extend .old_price_Bermuda
+  content: '$32' 
+button[type="submit"]
+  display: block
+  margin: auto
+  border: 0
+  background-color: transparent
+  color: $primary-color
+  text-transform: uppercase
+  font-size: 12px
+.wrap_form
+  background-image: url('../../images/bg_footer.png')
+  background-position: center
+  background-repeat: no-repeat
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+#subscribe_form
+  display: flex
+  flex-direction: column
+  text-align: center
+  align-items: center
+  margin: 70px 0
+  h5
+    color: #000
+    margin: 8px auto
+    text-transform: uppercase
+  h2
+    margin: 8px auto
+    color: #fff
+    font-size: 38px
+=placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-input
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+input[type="email"]
+  margin: 16px 0
+  text-align: center
+  border-radius: 50px
+  width: 295px
+  padding: 25px 4px
+  color: $placeholder
+  border: 1px #fff solid
+  background-color: transparent
+  +placeholder
+    color: $placeholder
+    font-size: 12px
+    text-transform: uppercase
+input[type="email"]:focus
+  outline: none
 footer
-  height: 50px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+.header_menu_footer
+  @extend .header_menu
+  li>a 
+    color: #000
+.copyright
+  font-size: 12px
+  display: block
+  text-align: center
+@media (min-width: 1024px)
