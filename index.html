@@ -6,9 +6,11 @@
 		<title>Eleken</title>
 		<link rel="stylesheet" href="stylesheets/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 		<link rel="shortcut icon" href="images/favico.ico">
 		</head>
 	<body>
+	<div class="page_wrap">
 	<header>
 		<div class="header_top">
 			<div class="wrap">
@@ -17,12 +19,12 @@
 					<li><a href="#">Faq</a></li>
 					<li><a href="#">Help</a></li>
 				</ul>
-				<select name="price" id="price">
-					<option value="Dollars">Dollars</option>
-				</select>
 				<select name="lang" id="lang">
 					<option value="EN">EN</option>
 					<option value="UA">UA</option>
+				</select>
+				<select name="price" id="price">
+					<option value="Dollars">Dollars</option>
 				</select>
 			</div>
 		</div>
@@ -63,65 +65,82 @@
 		</ul>
 	</div>
 	<div class="wrap_product">
-		<div class="product">
-			<div class="img_wrap">
-				<img src="images/printed_swimsuit.png" alt="Printed swimsuit">
+		<a href="#">
+			<div class="product">
+				<div class="img_wrap">
+					<img src="images/printed_swimsuit.png" alt="Printed swimsuit">
+				</div>
+				<h2>Printed swimsuit</h2>
+				<span class="price">$23</span>
 			</div>
-			<h2>Printed swimsuit</h2>
-			<span class="price">$23</span>
-		</div>
-		<div class="product">
-			<div class="img_wrap">
-				<img src="images/bermuda_shorts.png" alt="Jogging bermuda shorts">
+		</a>
+		<a href="#">
+			<div class="product">
+				<div class="img_wrap">
+					<img src="images/bermuda_shorts.png" alt="Jogging bermuda shorts">
+				</div>
+				<h2>Jogging bermuda shorts</h2>
+				<p class="price old_price_Bermuda">$12</p>
 			</div>
-			<h2>Jogging bermuda shorts</h2>
-			<p class="price old_price_Bermuda">$12</p>
-		</div>
-		<div class="product">
-			<div class="img_wrap">
-				<img src="images/flip_flops.png" alt="Basic beach flip flops">
-				<span class="new_product">New</span>
+		</a>
+		<a href="#">
+			<div class="product">
+				<div class="img_wrap">
+					<img src="images/flip_flops.png" alt="Basic beach flip flops">
+					<span class="new_product">New</span>
+				</div>
+				<h2>Basic beach flip flops</h2>
+				<span class="price">$9</span>
 			</div>
-			<h2>Basic beach flip flops</h2>
-			<span class="price">$9</span>
-		</div>
-		<div class="product">
-			<div class="img_wrap">
-				<img src="images/sunglasses.png" alt="Black sunglasses">
+		</a>
+		<a href="#">
+			<div class="product">
+				<div class="img_wrap">
+					<img src="images/sunglasses.png" alt="Black sunglasses">
+				</div>
+				<h2>Black sunglasses</h2>
+				<span class="price">$29</span>
 			</div>
-			<h2>Black sunglasses</h2>
-			<span class="price">$29</span>
-		</div>
-		<div class="product">
-			<div class="img_wrap">
-				<img src="images/twill short.png" alt="Long sleeved twill">
+		</a>
+		<a href="#">
+			<div class="product">
+				<div class="img_wrap">
+					<img src="images/twill_short.png" alt="Long sleeved twill">
+				</div>
+				<h2>Long sleeved twill</h2>
+				<span class="price">$20</span>
 			</div>
-			<h2>Long sleeved twill</h2>
-			<span class="price">$20</span>
-		</div>
-		<div class="product">
-			<div class="img_wrap">
-				<img src="images/basic swimsuit.png" alt="Basic swimsuit">
+		</a>
+		<a href="#">
+			<div class="product">
+				<div class="img_wrap">
+					<img src="images/basic_swimsuit.png" alt="Basic swimsuit">
+				</div>
+				<h2>Basic swimsuit</h2>
+				<span class="price">$36</span>
 			</div>
-			<h2>Basic swimsuit</h2>
-			<span class="price">$36</span>
-		</div>
-		<div class="product">
-			<div class="img_wrap">
-				<img src="images/bleached_shorts.png" alt="Bleached shorts">
+		</a>
+		<a href="#">
+			<div class="product">
+				<div class="img_wrap">
+					<img src="images/bleached_shorts.png" alt="Bleached shorts">
+				</div>
+				<h2>Bleached shorts</h2>
+				<span class="price">$12</span>
 			</div>
-			<h2>Bleached shorts</h2>
-			<span class="price">$12</span>
-		</div>
-		<div class="product">
-			<div class="img_wrap">
-				<img src="images/t-shirt.png" alt="T-shirt with lower panel">
+		</a>
+		<a href="#">
+			<div class="product">
+				<div class="img_wrap">
+					<img src="images/t-shirt.png" alt="T-shirt with lower panel">
+				</div>
+				<h2>T-shirt with lower panel</h2>
+				<span class="price old_price_T-shirt">$12</span>
 			</div>
-			<h2>T-shirt with lower panel</h2>
-			<span class="price old_price_T-shirt">$12</span>
-		</div>
+		</a>
 	</div>
 	<button type="submit">Load more...</button>
+	</div>
 	<footer>
 		<div class="wrap_form">
 			<form id="subscribe_form">
@@ -129,7 +148,7 @@
 				<h2>Stay updated on news</h2>
 				<label for="email">
 					<input type="email" id="email" placeholder="your email adress">
-					<input type="submit" value=">">
+					<span class="input_mail"></span>
 				</label>
 			</form>
 		</div>

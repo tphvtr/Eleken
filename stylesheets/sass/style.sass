@@ -1,7 +1,8 @@
 
 
 /*# sourceMappingURL=style.sass.map */
-$font-stack: 'Lato', sans-serif
+$font-Lato: 'Lato', sans-serif
+$font-main: 'Playfair Display', serif
 $primary-color: #999
 $active-color: #000
 $active-border-color: #1274d3
@@ -20,80 +21,90 @@ html, body
   height: 100%
 body
   min-height: 100%
-  font-family: $font-stack
+  font-family: $font-main
   color: $primary-color
   background-color: $bg-color
   min-width: 320px
   margin: 0 auto
 header
   border-bottom: 1px solid #ccc
+  margin: 0 0 64px
+.page_wrap
+  min-height: 100%
+  margin-bottom: -405px
+.page_wrap::after
+  content: ''
+  display: block
+  height: 405px
 .wrap
   min-width: 304px
   width: 100%
   max-width: 1140px
-  padding: 8px
   margin: 0 auto
 .img_wrap
   position: relative
-  display: flex
-  justify-content: center
-  align-items: center
+  display: table
+  width: 260px
 img
   width: 100%
+  display: table-cell
+  vertical-align: middle
 .wrap::after
   @extend .clear
 a
   color: $primary-color
   text-decoration: none
-nav
-  display: flex
-  flex: 4
 .active
   color: $active-color
   border-bottom: 2px solid $active-border-color
 .header_top
-  padding: 8px
   border-bottom: 1px solid #ccc
+  padding: 12px 0
+  display: flex
+  align-items: center
 .header_top::after
   @extend .clear
 .header_top_menu
-  display: block
-  justify-content: center
+  display: flex
+  float: left
+  justify-content: flex-start
   align-items: center
   list-style-type: none
   text-decoration: none
+  text-transform: uppercase
+  font-family: $font-Lato
   width: 240px
   margin: 0 4px
   padding: 0
+  font-size: 11px
 .header_top_menu li>a
   float: left
-  margin: 4px 16px
+  margin: 4px 16px 4px 0
 .header_top_menu li>a:hover
   color: #000
-#price
+#lang
   float: right
   margin: 4px
   border: 0
   -webkit-appearance: none
   border-radius: 0
-  padding: 0 12px
+  padding: 0 16px
   color: $primary-color
   background-color: transparent
   border-left: 1px #ccc solid
   background-image: url('../../images/arrow_bottom.png')
   background-position: right
   background-repeat: no-repeat
-#lang
-  @extend #price
+#price
+  @extend #lang
   border: 0
 #search
   text-indent: 2px
   text-align: right
   border: 0
   position: absolute
-  margin-right: 16px
   right: 0
-  bottom: -6px
+  bottom: 0
   display: none
   float: left
   margin-left: 24px
@@ -118,20 +129,23 @@ input[type="checkbox"]
 .header_main
   @extend .header_top
   border: 0
-  padding: 16px
   margin: 0 auto
   display: flex
+  padding: 10px 0
   align-items: center
   flex-direction: column
   position: relative
   justify-content: center
 .logo
+  width: 33.333%
   display: flex
   justify-content: center
   align-items: flex-end
   color: $logo_color
+  font-family: $font-Lato
   font-size: 32px
 .logo::before
+  font-family: $font-main
   content: 'c'
   text-transform: uppercase
   font-size: 58px
@@ -140,10 +154,17 @@ input[type="checkbox"]
   @extend .logo::before
   content: 'b'
 .header_menu 
-  @extend .header_top_menu
   display: flex
-  flex-direction: column
-  margin: auto
+  justify-content: center
+  padding: 0
+  list-style-type: none
+  text-decoration: none
+  text-transform: uppercase
+  font-family: $font-Lato
+  margin: 0 auto
+  font-size: 12px
+  li>a
+    margin: 4px 32px
 .header_menu li>a:hover
   color: $hover-color
 .header_main::after
@@ -167,27 +188,33 @@ input[type="checkbox"]
   margin: 0 16px
   text-align: center
 .wrap_bag_loop
-  width: 170px
+  width: 33.3333%
+  float: right
   display: flex
   justify-content: center
   align-items: center
 .content_menu
-  @extend .header_top_menu
+  @extend .header_menu
   display: flex
   flex-direction: column
-  width: 50%
+  width: 100%
   margin: 0 auto
 .wrap_menu
   display: flex
   flex-direction: column
   justify-content: center
+  margin: 0 0 48px
   h1
     color: #000
-    margin: 8px
+    margin: 16px 0 56px
+    font-size: 58px
+    font-family: 'Playfair Display', serif
+    font-weight: normal
     text-align: center
 .wrap_product
   @extend .wrap
-  margin: 16px auto
+  max-width: 1170px
+  margin: 0 auto 40px
   display: flex
   flex-direction: column
   align-items: center
@@ -195,10 +222,13 @@ input[type="checkbox"]
   display: flex
   flex-direction: column
   align-items: center
-  margin: 16px 30px
+  margin: 0 30px 
   height: 428px
+  width: calc(25% - 60px)
+  float: left
   h2
-    height: 58px
+    font-size: 16px
+    margin: 32px 0 8px
     text-align: center
 .new_product
   position: absolute
@@ -207,19 +237,26 @@ input[type="checkbox"]
   background-color: #1d83d9
   border-radius: 50px
   text-align: center
-  padding: 8px 10px
+  vertical-align: middle
+  padding: 6px 0
+  width: 45px
+  height: 24px
   top: 26px
   left: 26px
   text-transform: uppercase
+  font-family: $font-Lato
 .price
   display: flex
+  font-family: $font-Lato
 .old_price_Bermuda
+  margin: 0
   color: $new_price_color 
 .old_price_T-shirt
   @extend .old_price_Bermuda
 .old_price_Bermuda::before
   display: block
   content: '$36'
+  margin-right: 4px
   text-decoration: line-through
   color: $primary-color 
 .old_price_T-shirt::before
@@ -227,7 +264,7 @@ input[type="checkbox"]
   content: '$32' 
 button[type="submit"]
   display: block
-  margin: auto
+  margin: 0 auto 40px
   border: 0
   background-color: transparent
   color: $primary-color
@@ -248,13 +285,17 @@ button[type="submit"]:hover
   flex-direction: column
   text-align: center
   align-items: center
-  margin: 70px 0
+  padding: 72px 0
   h5
+    font-family: $font-Lato
+    font-weight: normal
     color: #000
     margin: 8px auto
     text-transform: uppercase
   h2
-    margin: 8px auto
+    margin: 0 auto
+    font-family: $font-main
+    font-weight: normal
     color: #fff
     font-size: 38px
 =placeholder
@@ -267,11 +308,11 @@ button[type="submit"]:hover
   &:-ms-input-placeholder
     @content
 input[type="email"]
-  margin: 16px 0
+  margin: 24px 0
   text-align: center
   border-radius: 50px
   width: 295px
-  padding: 25px 4px
+  padding: 16px 4px
   color: $placeholder
   border: 1px #fff solid
   background-color: transparent
@@ -283,44 +324,61 @@ input[type="email"]
     text-indent: 16px
 input[type="email"]:focus
   outline: none
-input[type="submit"]
-  background-color: transparent
-  border: 0
+input[type="submit"]:hover
+  cursor: pointer
+.input_mail::after
+  display: block
+  content: '>'
   color: #fff
   font-size: 12px
   position: relative
-  right: 40px
-input[type="submit"]:hover
+  float: right
+  top: 40px
+  right: 32px
+.input_mail:hover
   cursor: pointer
 footer
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
+  height: 405px
+nav
+  display: flex
+  align-items: center
 .header_menu_footer
   @extend .header_menu
+  align-items: center
   li>a 
     color: #000
+.wrap_footer
+  padding: 16px 0
 .copyright
+  width: 33.3333%
   font-size: 12px
   display: block
   text-align: center
   display: flex
+  justify-content: flex-end
   align-items: center
-@media (min-width: 800px)
+  font-family: $font-Lato
+@media (min-width: 960px)
+  .logo
+    justify-content: flex-start
+  .wrap_bag_loop
+    justify-content: flex-end
   .header_main
     flex-direction: row
   .header_menu
     flex-direction: row
   .wrap_footer
+    min-width: 304px
     width: 100%
     max-width: 1140px
+    margin: 0 auto
     display: flex
   .content_menu
     flex-direction: row
   .wrap_product
     display: block
     padding: 0
-  .product
-    width: calc(25% - 60px)
-    float: left
